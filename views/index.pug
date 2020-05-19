@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+  p
+    button(value='espresso' onclick='whatcoffee(value)') espresso  
+  p
+    button(value='americano' onclick='whatcoffee(value)') americano
+  p
+    button(value='latte' onclick='whatcoffee(value)') latte
+  p
+    button(value='cappuchino' onclick='whatcoffee(value)') cappuchino  
+  p  
+    button(value='anythingelse' onclick='whatcoffee(value)') anythingelse
+  
+  h1#like This
+  
+  script(src='/js/coffee.js')
