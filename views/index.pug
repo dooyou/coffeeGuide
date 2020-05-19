@@ -18,3 +18,34 @@ block content
   h1#like This
   
   script(src='/js/coffee.js')
+  -// script(src='/js/coffee.json')  
+  
+  script.
+    var xmlhttp = new XMLHttpRequest();
+    var url = "/js/coffee.json";
+
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        myfunc(xmlhttp.responseText);
+      }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
+    function myfunc(resp) {
+      var arr = JSON.parse(resp);
+      var out = "<table border='1'>";
+
+      for (var i = 0; i < arr.length; i++) {
+        out+=
+          "<tr>"+
+          "<td>"+ arr[i].name + "</td>" +
+          "</tr>";
+      }
+      document.getElementById('like').innerHTML = out;
+    }
+      
+
+      
+    
+  

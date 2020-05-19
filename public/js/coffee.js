@@ -1,9 +1,4 @@
-()=>{
-
-}
-
   function whatcoffee(value) {
-
     function coffeeOrder({ coffee }){
       switch (coffee) {
         case 'espresso':
@@ -48,8 +43,6 @@
         case 'short':
           return ['Espresso', 'Milk', 'Cream'];
           break;
-
-
 
         default:
           return 'What do you want ?';
