@@ -2,7 +2,7 @@
 
 커피를 좋아해서 한번쯤은 만들어 보고 싶었습니다.하하~
 
-## espresso
+## Espresso
 Espresso
 
 ## Loungo
@@ -12,34 +12,34 @@ Espresso
 Espresso + Hot Water
 
 ## short
-'Espresso', 'Milk', 'Cream'
+Espresso, Milk, Cream
 
 ## Latte
 Espresso + Milk + Milk foam
 
 ## Cappuchino
-'Espresso', 'Milk', 'Cream'
+Espresso, Milk, Cream
 
 ## Macchiato
-'Espresso', 'Milk foam'
+Espresso, Milk foam
 
 ## Caramel Macchiato
-'Espresso', 'Caramel', 'Milk', 'Milk foam'
+Espresso, Caramel, Milk, Milk foam
 
 ## Amaretto
-'Espresso', 'Amaretto', 'Cream'
+Espresso, Amaretto, Cream
 
 ## Conpanna
-'Espresso', 'Cream'
+Espresso, Cream
 
 ## Flat White
-'Espresso', 'Milk'
+Espresso, Milk
 
 ## Hawaiian
-'Espresso', 'Coconut Milk'
+Espresso, Coconut Milk
 
 ## Irish
-'Espresso', 'Whisky', 'Cream'
+Espresso, Whisky, Cream
 
 ## milkpunch
-'Milk', 'Honey', 'Whisky'
+Milk, Honey, Whisky
