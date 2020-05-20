@@ -16,6 +16,7 @@
   {
     "name" : "Doppio",
     "recipe" : "Two Espresso shots",
+    "bulk" : " ",
     "nutritionalFacts" : {
       "kcal" : "5",
       "sodium" : "0",

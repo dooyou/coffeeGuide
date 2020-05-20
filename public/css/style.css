@@ -1,8 +1,9 @@
-body { padding: 50px;} 
-
 a { color: #00B7FF; }
+
 #like { padding:2rem;
 background: rgb(255,220,219);
 background: linear-gradient(42deg, rgba(255,220,219,1) 0%,
 rgba(215,209,227,0.3) 67%,  rgba(180,200,234,1) 100%);}
+
+
 .tableName td{border-bottom:1px solid #dddddd;}

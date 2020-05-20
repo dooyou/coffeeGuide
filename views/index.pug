@@ -1,27 +1,32 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .jumbotron.jumbotron-fluid
+    .container
+      h1= title
+      p We offer numerous ways to learn about coffee. You can browse our <a href='https://www.coffeereview.com/coffee-reference/' target='_blank'>Coffee Reference</a> section, where you’ll find hundreds of pages of interesting and informative coffee content adapted from Kenneth Davids’ books. Are you unfamiliar with a term used in one of our tasting reports or reviews? Our Coffee <a href='https://www.coffeereview.com/coffee-glossary/' target='_blank'>Glossary</a> defines hundreds of common and not-so-common words in the coffee lexicon.
+  nav.navbar.navbar-expand-sm.bg-dark
+    ul.navbar-nav
+      li.nav-item
+        button(value='espresso' onclick='whatcoffee(value)') espresso
+      li.nav-item
+        button(value='espresso' onclick='whatcoffee2(value)') espresso2     
+      li.nav-item
+        button(value='americano' onclick='whatcoffee(value)') americano
+      li.nav-item
+        button(value='latte' onclick='whatcoffee(value)') latte
+      li.nav-item
+        button(value='cappuchino' onclick='whatcoffee(value)') cappuchino  
+      li.nav-item  
+        button(value='anythingelse' onclick='whatcoffee(value)') anythingelse
   
-  ul
-    li
-      button(value='espresso' onclick='whatcoffee(value)') espresso  
-    li
-      button(value='americano' onclick='whatcoffee(value)') americano
-    li
-      button(value='latte' onclick='whatcoffee(value)') latte
-    li
-      button(value='cappuchino' onclick='whatcoffee(value)') cappuchino  
-    li  
-      button(value='anythingelse' onclick='whatcoffee(value)') anythingelse
-  
-  h1#like This
+  h1#like Welcome to #{title}
   
   script(src='/js/coffee.js')
   -// script(src='/js/coffee.json')  
   
   script.
+    
     var xmlhttp = new XMLHttpRequest();
     var url = "/js/coffee.json";
 
@@ -30,9 +35,12 @@ block content
         myfunc(xmlhttp.responseText);
       }
     };
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
-
+    
+    const whatcoffee2 = (value) => {
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+    }
+    
     function myfunc(resp) {
       var arr = JSON.parse(resp);
       var out = "<table class='tableName'>";
@@ -40,7 +48,7 @@ block content
       for (var i = 0; i < arr.length; i++) {
         out+=
           `<tr>
-           <td> ${arr[i].nutritionalFacts.Caffeine} </td>
+           <td> ${arr[i].bulk} </td>
           </tr>`;
       }
       document.getElementById('like').innerHTML = out;
