@@ -7,23 +7,14 @@ block content
       p We offer numerous ways to learn about coffee. You can browse our <a href='https://www.coffeereview.com/coffee-reference/' target='_blank'>Coffee Reference</a> section, where you’ll find hundreds of pages of interesting and informative coffee content adapted from Kenneth Davids’ books. Are you unfamiliar with a term used in one of our tasting reports or reviews? Our Coffee <a href='https://www.coffeereview.com/coffee-glossary/' target='_blank'>Glossary</a> defines hundreds of common and not-so-common words in the coffee lexicon.
   nav.navbar.navbar-expand-sm.bg-dark
     ul.navbar-nav
-      li.nav-item
-        button(value='espresso' onclick='whatcoffee(value)') espresso
-      li.nav-item
-        button(value='espresso' onclick='whatcoffee2(value)') espresso2     
-      li.nav-item
-        button(value='americano' onclick='whatcoffee(value)') americano
-      li.nav-item
-        button(value='latte' onclick='whatcoffee(value)') latte
-      li.nav-item
-        button(value='cappuchino' onclick='whatcoffee(value)') cappuchino  
-      li.nav-item  
-        button(value='anythingelse' onclick='whatcoffee(value)') anythingelse
-  
+      - data.forEach((item, i) => {
+        li.nav-item
+            button(value=`${item.name}` onclick='whatcoffee(value)') #{item.name}
+      - });
+      
   h1#like Welcome to #{title}
   
   script(src='/js/coffee.js')
-  -// script(src='/js/coffee.json')  
   
   script.
     
@@ -44,13 +35,11 @@ block content
     function myfunc(resp) {
       var arr = JSON.parse(resp);
       var out = "<table class='tableName'>";
-
-      for (var i = 0; i < arr.length; i++) {
-        out+=
-          `<tr>
-           <td> ${arr[i].bulk} </td>
-          </tr>`;
-      }
+      
+      arr.forEach( (v) => {
+         out += `<tr><td> ${v.name} </td></tr>`;
+        });
+        
       document.getElementById('like').innerHTML = out;
     }
       

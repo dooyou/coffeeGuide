@@ -4,6 +4,9 @@
         case 'espresso':
           return ['Espresso'];
           break;
+        case 'doppio':
+          return ['Two Espresso shots'];
+          break;
         case 'americano':
           return ['Espresso', 'Hot Water'];
           break;
