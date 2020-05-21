@@ -1,6 +1,6 @@
 [
   {
-  "name" : "Espresso",
+  "name" : "espresso",
   "recipe" : "Espresso",
   "bulk" : " 22ml (0.75 fl oz)",
   "nutritionalFacts" : {
@@ -14,7 +14,7 @@
   "info" : "Espresso is a concentrated beverage brewed by forcing a small amount of nearly boiling water under pressure through finely ground coffee beans."
   },
   {
-    "name" : "Doppio",
+    "name" : "doppio",
     "recipe" : "Two Espresso shots",
     "bulk" : "test ",
     "nutritionalFacts" : {
@@ -24,6 +24,20 @@
       "protein" : "0",
       "sugar" : "0",
       "Caffeine" : "150"
+    },
+    "info" :"Doppio in esresso is a double shotof espresso."
+  },
+  {
+    "name" : "americano",
+    "recipe" : "Espresso + Hot Water",
+    "bulk" : "test ",
+    "nutritionalFacts" : {
+      "kcal" : "5",
+      "sodium" : "0",
+      "saturtedFat" : "0",
+      "protein" : "0",
+      "sugar" : "0",
+      "Caffeine" : "75"
     },
     "info" :"Doppio in esresso is a double shotof espresso."
   }

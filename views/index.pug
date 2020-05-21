@@ -7,41 +7,19 @@ block content
       p We offer numerous ways to learn about coffee. You can browse our <a href='https://www.coffeereview.com/coffee-reference/' target='_blank'>Coffee Reference</a> section, where you’ll find hundreds of pages of interesting and informative coffee content adapted from Kenneth Davids’ books. Are you unfamiliar with a term used in one of our tasting reports or reviews? Our Coffee <a href='https://www.coffeereview.com/coffee-glossary/' target='_blank'>Glossary</a> defines hundreds of common and not-so-common words in the coffee lexicon.
   nav.navbar.navbar-expand-sm.bg-dark
     ul.navbar-nav
-      - data.forEach((item, i) => {
+      - dataJson.forEach((item) => {
         li.nav-item
             button(value=`${item.name}` onclick='whatcoffee(value)') #{item.name}
       - });
       
   h1#like Welcome to #{title}
   
-  script(src='/js/coffee.js')
-  
+  //- script(src='/js/coffee.js')
   script.
-    
-    var xmlhttp = new XMLHttpRequest();
-    var url = "/js/coffee.json";
-
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        myfunc(xmlhttp.responseText);
-      }
-    };
-    
-    const whatcoffee2 = (value) => {
-      xmlhttp.open("GET", url, true);
-      xmlhttp.send();
+    function whatcoffee(value) {
+      document.getElementById('like').innerHTML = value;
     }
-    
-    function myfunc(resp) {
-      var arr = JSON.parse(resp);
-      var out = "<table class='tableName'>";
-      
-      arr.forEach( (v) => {
-         out += `<tr><td> ${v.name} </td></tr>`;
-        });
-        
-      document.getElementById('like').innerHTML = out;
-    }
+  
       
 
       
