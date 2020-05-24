@@ -54,6 +54,20 @@
       "Caffeine" : "75"
     },
     "info" :"latte is ...."
+  },
+  {
+    "name" : "cappuchino",
+    "recipe" : "Espresso + Milk + Cream",
+    "bulk" : "test ",
+    "nutritionalFacts" : {
+      "kcal" : "5",
+      "sodium" : "0",
+      "saturtedFat" : "0",
+      "protein" : "0",
+      "sugar" : "0",
+      "Caffeine" : "75"
+    },
+    "info" :"cappuchino is ...."
   }
 
 ]
