@@ -8,16 +8,16 @@ block content
   nav.navbar.navbar-expand-sm.bg-dark
     ul.navbar-nav
       - dataJson.forEach((item) => {
-        li.nav-item
-            button(value=`${item.name}` onclick='whatcoffee(value)') #{item.name}
+          li.nav-item
+              button(value=`${item.name}` title=`${item.info}` onclick=`whatcoffee(value, title)`) #{item.name}
       - });
       
   h1#like Welcome to #{title}
   
   //- script(src='/js/coffee.js')
   script.
-    function whatcoffee(value) {
-      document.getElementById('like').innerHTML = value;
+    function whatcoffee(value, title) {
+      document.getElementById('like').innerHTML = value + ' : ' + title;
     }
   
       
