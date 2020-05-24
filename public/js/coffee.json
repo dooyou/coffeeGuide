@@ -39,7 +39,21 @@
       "sugar" : "0",
       "Caffeine" : "75"
     },
-    "info" :"Doppio in esresso is a double shotof espresso."
+    "info" :"Americano is ..."
+  },
+  {
+    "name" : "latte",
+    "recipe" : "Espresso + Milk + Milk foam",
+    "bulk" : "test ",
+    "nutritionalFacts" : {
+      "kcal" : "5",
+      "sodium" : "0",
+      "saturtedFat" : "0",
+      "protein" : "0",
+      "sugar" : "0",
+      "Caffeine" : "75"
+    },
+    "info" :"latte is ...."
   }
 
 ]
