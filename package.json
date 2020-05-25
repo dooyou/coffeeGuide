@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "connect": "^3.7.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
@@ -18,5 +19,14 @@
   "main": "app.js",
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "커피를 좋아해서 한번쯤은 만들어 보고 싶었습니다.하하~",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dooyou/coffeeGuide.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dooyou/coffeeGuide/issues"
+  },
+  "homepage": "https://github.com/dooyou/coffeeGuide#readme"
 }
