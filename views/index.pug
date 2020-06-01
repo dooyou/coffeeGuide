@@ -1,16 +1,17 @@
 extends layout
 
 block content
-  .jumbotron.jumbotron-fluid
-    .container
-      h1= title
-      p We offer numerous ways to learn about coffee. You can browse our <a href='https://www.coffeereview.com/coffee-reference/' target='_blank'>Coffee Reference</a> section, where you’ll find hundreds of pages of interesting and informative coffee content adapted from Kenneth Davids’ books. Are you unfamiliar with a term used in one of our tasting reports or reviews? Our Coffee <a href='https://www.coffeereview.com/coffee-glossary/' target='_blank'>Glossary</a> defines hundreds of common and not-so-common words in the coffee lexicon.
   nav.navbar.navbar-expand-sm.bg-dark
     ul.navbar-nav
       - dataJson.forEach((item) => {
           li.nav-item
               button(value=`${item.name}` title=`${item.info}` onclick=`whatcoffee(value, title)`) #{item.name}
       - });
+  .jumbotron.jumbotron-fluid
+    .container
+      h1= title
+      p We offer numerous ways to learn about coffee. You can browse our <a href='https://www.coffeereview.com/coffee-reference/' target='_blank'>Coffee Reference</a> section, where you’ll find hundreds of pages of interesting and informative coffee content adapted from Kenneth Davids’ books. Are you unfamiliar with a term used in one of our tasting reports or reviews? Our Coffee <a href='https://www.coffeereview.com/coffee-glossary/' target='_blank'>Glossary</a> defines hundreds of common and not-so-common words in the coffee lexicon.
+  
       
   h1#like Welcome to #{title}
   
